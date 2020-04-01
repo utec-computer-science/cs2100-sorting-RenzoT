@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Renzo/Documents/GitHub/cs2100-sorting-RenzoT/Sorting.cpp
+Sorting.h
+C:/Users/Renzo/Documents/GitHub/cs2100-sorting-RenzoT/Sorting.h
+
+C:/Users/Renzo/Documents/GitHub/cs2100-sorting-RenzoT/Sorting.h
+vector
+-
+
+C:/Users/Renzo/Documents/GitHub/cs2100-sorting-RenzoT/main.cpp
+iostream
+-
+vector
+-
+Sorting.cpp
+C:/Users/Renzo/Documents/GitHub/cs2100-sorting-RenzoT/Sorting.cpp
+
