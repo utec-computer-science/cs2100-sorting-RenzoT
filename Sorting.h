@@ -13,9 +13,12 @@ private:
     vector<int> myvec;
 public:
     Sorting(const vector<int> &myvec);
+    int PosMin(int i, int j);
+    void Intercambia(int i, int pmin);
     void imprimir();
     //Mandatory
     void InsertSort();
+    void SelectionSort();
 
 };
 

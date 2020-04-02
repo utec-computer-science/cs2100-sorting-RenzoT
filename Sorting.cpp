@@ -12,6 +12,23 @@ void Sorting::imprimir() {
     }
 }
 
+void Sorting::Intercambia(int i, int pmin) {
+    int temp;
+    temp = myvec[i];
+    myvec[i]=myvec[pmin];
+    myvec[pmin]=temp;
+}
+
+int Sorting::PosMin(int i, int j) {
+    int pmin;
+    pmin = i;
+    for (int k=i+1; k<=j; k++)
+        if (myvec[k]<myvec[pmin])
+            pmin=k;
+    return pmin;
+}
+
+//Mandatory
 void Sorting::InsertSort() {
     for (int i=1; i <= myvec.size(); i++){
         int x = myvec[i], j=i-1;
@@ -21,4 +38,9 @@ void Sorting::InsertSort() {
         }
         myvec[j+1] = x;
     }
+}
+
+void Sorting::SelectionSort() {
+    for (int i=0 ; i < myvec.size()-2;i++)
+        Intercambia(i,PosMin(i,myvec.size()-1));
 }
