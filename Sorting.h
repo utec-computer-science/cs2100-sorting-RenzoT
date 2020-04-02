@@ -19,6 +19,7 @@ public:
     //Mandatory
     void InsertSort();
     void SelectionSort();
+    void BubbleSort();
 
 };
 

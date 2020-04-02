@@ -41,6 +41,13 @@ void Sorting::InsertSort() {
 }
 
 void Sorting::SelectionSort() {
-    for (int i=0 ; i < myvec.size()-2;i++)
+    for (int i=0 ; i <= myvec.size()-2;i++)
         Intercambia(i,PosMin(i,myvec.size()-1));
+}
+
+void Sorting::BubbleSort() {
+    for (int i=0; i <= myvec.size()-2;i++)
+        for (int j = myvec.size()-1;j>=i+1;j--)
+            if (myvec[j-1]>myvec[j])
+                Intercambia(j-1,j);
 }
