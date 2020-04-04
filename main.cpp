@@ -4,11 +4,19 @@
 using namespace std;
 
 int main(int, char*[]) {
-    vector<int> numeros {5,4,3,2,1};
+    vector<int> numeros {40,4,2,3,1};
     Sorting myvector(numeros);
+    //Mandatory
     //myvector.InsertSort();
     //myvector.SelectionSort();
-    myvector.BubbleSort();
+    //myvector.BubbleSort();
+    //myvector.MergeSort(); ~
+    //myvector.HeapSort(); ~
+    //myvector.QuickSort(); ~
+    //Extra
+    //myvector.ShellSort(); ~
+    myvector.BinSort();
+
     myvector.imprimir();
     return 1;
 }

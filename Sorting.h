@@ -6,6 +6,7 @@
 #define CS2100_SORTING_RENZOT_SORTING_H
 
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 class Sorting {
@@ -16,10 +17,20 @@ public:
     int PosMin(int i, int j);
     void Intercambia(int i, int pmin);
     void imprimir();
+    void Combinar();
+    void HacerMonticulo();
+    void Empujar(int i, int m);
     //Mandatory
     void InsertSort();
     void SelectionSort();
     void BubbleSort();
+    void MergeSort();
+    void HeapSort();
+    void QuickSort();
+    //Extra
+    void ShellSort();
+    void BinSort();
+
 
 };
 
