@@ -20,13 +20,14 @@ public:
     void Combinar();
     void HacerMonticulo();
     void Empujar(int i, int m);
+    int Pivote(int low, int high);
     //Mandatory
     void InsertSort();
     void SelectionSort();
     void BubbleSort();
     void MergeSort();
     void HeapSort();
-    void QuickSort();
+    void QuickSort(int low, int high);
     //Extra
     void ShellSort();
     void BinSort();

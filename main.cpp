@@ -12,10 +12,10 @@ int main(int, char*[]) {
     //myvector.BubbleSort();
     //myvector.MergeSort(); ~
     //myvector.HeapSort(); ~
-    //myvector.QuickSort(); ~
+    //myvector.QuickSort(0,numeros.size()-1);
     //Extra
     //myvector.ShellSort(); ~
-    myvector.BinSort();
+    //myvector.BinSort();
 
     myvector.imprimir();
     return 1;

@@ -19,6 +19,19 @@ void Sorting::Intercambia(int i, int pmin) {
     myvec[pmin]=temp;
 }
 
+int Sorting::Pivote(int low, int high) {
+    int piv = myvec[high],
+        i = low-1;
+
+    for (int j=low; j<=high-1;j++){
+        if (myvec[j] <= piv){
+            i++;
+            Intercambia(i,j);
+        }
+    }
+    Intercambia(i+1,high);
+    return i+1;
+}
 
 int Sorting::PosMin(int i, int j) {
     int pmin;
@@ -93,9 +106,13 @@ void Sorting::HeapSort() {
 
 }
 
-void Sorting::QuickSort() {
-
-}
+void Sorting::QuickSort(int low, int high) {
+    if (low < high){
+        int piv = Pivote(low, high);
+        QuickSort(low, piv-1);
+        QuickSort(piv+1, high);
+    }
+    }
 
 void Sorting::ShellSort() {
     int N=myvec.size(),
