@@ -42,7 +42,37 @@ int Sorting::PosMin(int i, int j) {
     return pmin;
 }
 
-void Sorting::Combinar() {
+void Sorting::Combinar(int low,int med, int high) {
+    int i,j,k,
+        n1 = med - low +1,
+        n2 = high - med;
+    int Left[n1], Right[n2];
+
+    for (i=0; i< n1 ; i++)
+        Left[i] = myvec[low+i];
+    for (j=0; j< n2 ; j++)
+        Right[j] = myvec[med+1+j];
+    i=0,j=0,k=low;
+    while (i < n1 && j < n2){
+        if (Left[i] <= Right[j]){
+            myvec[k] = Left[i];
+            i++;
+        } else {
+            myvec[k] = Right[j];
+            j++;
+        }
+        k++;
+    }
+    while (i < n1){
+        myvec[k] = Left[i];
+        i++;
+        k++;
+    }
+    while (j < n2){
+        myvec[k] = Right[j];
+        j++;
+        k++;
+    }
 
 }
 
@@ -84,8 +114,14 @@ void Sorting::BubbleSort() {
                 Intercambia(j-1,j);
 }
 
-void Sorting::MergeSort() {
+void Sorting::MergeSort(int low, int high) {
+    if (low < high){
+        int med = low + (high - low)/2;
 
+        MergeSort(low,med);
+        MergeSort(med+1, high);
+        Combinar(low,med,high);
+    }
 }
 
 

@@ -10,8 +10,8 @@ int main(int, char*[]) {
     //myvector.InsertSort();
     //myvector.SelectionSort();
     //myvector.BubbleSort();
-    //myvector.MergeSort(); ~
-    myvector.HeapSort();
+    myvector.MergeSort(0, numeros.size()-1);
+    //myvector.HeapSort();
     //myvector.QuickSort(0,numeros.size()-1);
     //Extra
     //myvector.ShellSort(); ~

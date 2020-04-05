@@ -17,14 +17,14 @@ public:
     int PosMin(int i, int j);
     void Intercambia(int i, int pmin);
     void imprimir();
-    void Combinar();
+    void Combinar(int low,int med, int high);
     void Empujar(int prim, int ult);
     int Pivote(int low, int high);
     //Mandatory
     void InsertSort();
     void SelectionSort();
     void BubbleSort();
-    void MergeSort();
+    void MergeSort(int low, int high);
     void HeapSort();
     void QuickSort(int low, int high);
     //Extra
