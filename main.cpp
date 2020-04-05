@@ -11,12 +11,11 @@ int main(int, char*[]) {
     //myvector.SelectionSort();
     //myvector.BubbleSort();
     //myvector.MergeSort(); ~
-    //myvector.HeapSort(); ~
+    myvector.HeapSort();
     //myvector.QuickSort(0,numeros.size()-1);
     //Extra
     //myvector.ShellSort(); ~
     //myvector.BinSort();
-
     myvector.imprimir();
     return 1;
 }

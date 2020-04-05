@@ -18,8 +18,7 @@ public:
     void Intercambia(int i, int pmin);
     void imprimir();
     void Combinar();
-    void HacerMonticulo();
-    void Empujar(int i, int m);
+    void Empujar(int prim, int ult);
     int Pivote(int low, int high);
     //Mandatory
     void InsertSort();

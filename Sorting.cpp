@@ -46,24 +46,18 @@ void Sorting::Combinar() {
 
 }
 
-void Sorting::HacerMonticulo() {
-    for (int i =((myvec.size()-1)-0+1)/2;i >=1 ; i--)
-        Empujar(myvec.size()-1,0+i-1);
-}
-
-void Sorting::Empujar(int i, int m) {
-int k=i-0+1,
-    j;
-    do{
-        j=k;
-        if (2*j<=m-0+1 && myvec[2*j+0-1]>myvec[k+0-1])
-            k=2*j;
-        else if (2*j<(m-0+1)-1 && myvec[2*j+0]>myvec[k+0-1])
-            k=2*j+1;
-        else
-        Intercambia(j+0-1,k+0-1);
+void Sorting::Empujar(int size, int node) {
+    int l = node,
+        left = 2*node+1,
+        right = 2*node+2;
+    if (left < size && myvec[left] > myvec[l] )
+        l = left;
+    if (right < size && myvec[right] > myvec[l] )
+        l = right;
+    if (l != node ) {
+        Intercambia(node, l);
+        Empujar(size, l);
     }
-    while (j!=k);
 }
 
 //Mandatory
@@ -96,14 +90,16 @@ void Sorting::MergeSort() {
 
 
 void Sorting::HeapSort() {
-    HacerMonticulo();
-    for (int i=myvec.size()-1; i >= 1; i--){
+
+    for (int i =myvec.size() / 2  - 1; i >= 0; i--)
+        Empujar(myvec.size(),i);
+
+
+    for (int i=myvec.size()-1; i>0; i--)
+    {
         Intercambia(0,i);
-        Empujar(i-1,0);
+        Empujar(i, 0);
     }
-
-
-
 }
 
 void Sorting::QuickSort(int low, int high) {
